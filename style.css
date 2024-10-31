@@ -1,88 +1,121 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 header {
-  background-color: #333; /* Укажите цвет фона */
-  color: #fff; /* Укажите цвет текста */
+  background-color: #007BFF; /* Цвет фона */
+  color: #fff; /* Цвет текста */
   padding: 15px 0;
   text-align: center;
   position: fixed; /* Зафиксируйте шапку */
   top: 0;
   width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
-  display: flex; /* Выровняйте ссылки по горизонтали */
+  display: flex;
   justify-content: center;
-  gap: 20px; /* Укажите расстояние между ссылками */
+  gap: 30px; /* Расстояние между ссылками */
 }
 
 nav a {
-  color: #fff; /* Укажите цвет ссылок */
+  color: #fff; /* Цвет ссылок */
   text-decoration: none; /* Уберите подчеркивание */
-  padding: 10px;
+  padding: 10px 15px;
+  border-radius: 5px; /* Скругление углов ссылок */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
 }
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Эффект при наведении */
+}
+
 .hero {
-  background-image: url('background.jpg'); /* Добавьте ссылку на изображение */
-  background-size: cover; /* Укажите размер фона */
-  background-position: center; /* Позиционируйте изображение */
-  height: 100vh; /* Укажите высоту секции */
-  display: flex; /* Используйте Flexbox */
-  justify-content: center; /* Выровняйте элементы по горизонтали */
-  align-items: center; /* Выровняйте элементы по вертикали */
-  text-align: center; /* Выровняйте текст */
-  color: #fff; /* Укажите цвет текста */
+  background-image: url('background.jpg'); /* Фоновое изображение */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
+
+.hero h1 {
+  font-size: 3rem; /* Размер заголовка */
+}
+
+.hero p {
+  font-size: 1.5rem; /* Размер текста */
+}
+
 .about {
-  padding: 40px;
-  display: flex; /* Используйте Flexbox */
-  justify-content: space-between; /* Выровняйте содержимое */
-  gap: 20px; /* Укажите расстояние между элементами */
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #fff; /* Цвет фона секции */
 }
 
 .about-text {
-  flex: 1; /* Задайте, как текст будет занимать пространство */
+  flex: 1;
   min-width: 300px;
 }
 
 .about img {
   flex: 1;
-  max-width: 300px; /* Установите максимальную ширину изображения */
-  border-radius: 10px; /* Добавьте скругленные углы */
+  max-width: 350px;
+  border-radius: 15px;
 }
+
 .services {
-  background-color: #f9f9f9; /* Цвет фона */
-  padding: 40px;
+  background-color: #e9ecef; /* Цвет фона */
+  padding: 60px 20px;
   text-align: center;
 }
 
 .cards {
-  display: flex; /* Используйте Flexbox */
-  justify-content: space-around; /* Выровняйте карточки */
-  gap: 20px; /* Расстояние между карточками */
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .card {
   background-color: #fff; /* Цвет фона карточки */
   padding: 20px;
-  width: 200px; /* Укажите ширину карточки */
-  border-radius: 10px; /* Скруглите углы */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавьте тень */
+  width: 250px; /* Ширина карточки */
+  border-radius: 10px; /* Скругление углов */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень карточек */
+  transition: transform 0.3s; /* Плавный переход при наведении */
 }
+
+.card:hover {
+  transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
 footer {
-  background-color: #333; /* Укажите цвет фона */
+  background-color: #343a40; /* Цвет фона */
   color: #fff; /* Цвет текста */
-  text-align: center; /* Выравнивание текста */
+  text-align: center;
   padding: 20px;
 }
+
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2rem; /* Уменьшите размер текста */
+    font-size: 2.5rem; /* Уменьшение размера текста */
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .about, .cards {
-    flex-direction: column; /* Сделайте элементы вертикальными */
+    flex-direction: column; /* Вертикальное расположение на маленьких экранах */
     align-items: center;
   }
 }
